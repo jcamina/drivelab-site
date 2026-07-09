@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveLab — The Self-Driving Journal</title>
+<meta name="description" content="DriveLab is a drive journal for self-driving testers. Log disengagements, interventions, hesitations, and highlights in one tap — then replay every drive.">
+<meta property="og:title" content="DriveLab — The Self-Driving Journal">
+<meta property="og:description" content="Log disengagements, interventions, hesitations, and highlights in one tap — then replay every drive.">
+<meta property="og:image" content="https://jcamina.github.io/drivelab-site/icon.png">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --bg: #0b0e12;
+    --card: #151a21;
+    --text: #f2f5f7;
+    --secondary: #9aa5ad;
+    --accent: #54d6f0;
+    --accent-dim: rgba(84, 214, 240, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 48px;
+    text-align: center;
+  }
+  .icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 28.6px; /* iOS squircle proportion */
+    box-shadow: 0 12px 40px rgba(84, 214, 240, 0.18), 0 2px 8px rgba(0,0,0,0.5);
+  }
+  h1 {
+    margin-top: 28px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    margin-top: 6px;
+    font-size: 21px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .lede {
+    margin: 22px auto 0;
+    max-width: 480px;
+    font-size: 17px;
+    color: var(--secondary);
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #06282f;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(84,214,240,0.35); }
+  .cta.soon {
+    background: var(--accent-dim);
+    color: var(--accent);
+    cursor: default;
+  }
+  .cta.soon:hover { transform: none; box-shadow: none; }
+  .requires {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--secondary);
+  }
+  .features {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    text-align: left;
+  }
+  .feature {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px;
+  }
+  .feature h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .feature p {
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--secondary);
+  }
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    color: var(--secondary);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .disclaimer { margin-top: 10px; font-size: 12px; opacity: 0.75; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="icon.png" alt="DriveLab app icon">
+  <h1>DriveLab</h1>
+  <p class="subtitle">The Self-Driving Journal.</p>
+  <p class="lede">Mount your phone, start a drive, and log disengagements, interventions, hesitations, and highlights in one tap — with the exact street and second attached to every event.</p>
+
+  <!-- BETA LINK: replace href with the TestFlight public link and remove class "soon" -->
+  <a class="cta soon" href="#">Beta Opening Soon</a>
+  <p class="requires">Requires iOS 26 · Free during beta</p>
+
+  <div class="features">
+    <div class="feature">
+      <h3>One-Tap Logging</h3>
+      <p>Four big glass buttons made for a mounted phone. Tap, keep your eyes on the road, and add a quick voice note that transcribes itself.</p>
+    </div>
+    <div class="feature">
+      <h3>Replay Every Drive</h3>
+      <p>Watch any drive back with a follow camera, tap through events on the timeline, and see exactly where the car hesitated.</p>
+    </div>
+    <div class="feature">
+      <h3>Match Your Dashcam</h3>
+      <p>Export a timestamped text log of any drive so you can find the exact moment in your dashcam footage.</p>
+    </div>
+    <div class="feature">
+      <h3>Private by Design</h3>
+      <p>Every drive stays on your iPhone. No account, no servers, no analytics — your data never leaves your device.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="privacy.html">Privacy Policy</a> · Contact: jordancamina@gmail.com</p>
+    <p class="disclaimer">DriveLab is an independent app and is not affiliated with, endorsed by, or sponsored by Tesla, Inc. or any vehicle manufacturer.</p>
+  </footer>
+</div>
+</body>
+</html>
