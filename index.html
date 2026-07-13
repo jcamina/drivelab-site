@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DriveLab: The Self-Driving Journal</title>
-<meta name="description" content="DriveLab is a drive journal for self-driving testers. Log disengagements, interventions, hesitations, and highlights in one tap, then replay every drive.">
+<meta name="description" content="DriveLab is a drive journal for self-driving testers. Log disengagements, interventions, hesitations, and highlights in one tap, replay every drive, and export events as timeline markers for your video editor.">
 <meta property="og:title" content="DriveLab: The Self-Driving Journal">
-<meta property="og:description" content="Log disengagements, interventions, hesitations, and highlights in one tap, then replay every drive.">
+<meta property="og:description" content="Log disengagements, interventions, hesitations, and highlights in one tap, replay every drive, and export events as timeline markers for your video editor.">
+<meta property="og:url" content="https://jcamina.github.io/drivelab-site/">
 <meta property="og:image" content="https://jcamina.github.io/drivelab-site/icon.png">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <style>
@@ -70,16 +72,22 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
   .cta:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(84,214,240,0.35); }
-  .cta.soon {
-    background: var(--accent-dim);
-    color: var(--accent);
-    cursor: default;
-  }
-  .cta.soon:hover { transform: none; box-shadow: none; }
   .requires {
     margin-top: 14px;
     font-size: 13px;
     color: var(--secondary);
+  }
+  .hero {
+    display: block;
+    margin: 52px auto 0;
+    width: min(330px, 82vw);
+    height: auto;
+    border-radius: 36px 36px 0 0;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-bottom: none;
+    box-shadow: 0 24px 80px rgba(84,214,240,0.10), 0 8px 32px rgba(0,0,0,0.55);
+    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
   }
   .features {
     margin-top: 64px;
@@ -125,10 +133,16 @@
   <a class="cta" href="https://testflight.apple.com/join/ssfDS3Dg">Join the Beta on TestFlight</a>
   <p class="requires">Requires iOS 26 · Free during beta</p>
 
+  <img class="hero" src="screenshot.png" alt="DriveLab home screen: 30-day stats, version filters, and a drive from Port Imperial to Manhattan with logged events" width="660" height="715">
+
   <div class="features">
     <div class="feature">
       <h3>One-Tap Logging</h3>
       <p>Four big glass buttons made for a mounted phone. Tap, keep your eyes on the road, and add a quick voice note that transcribes itself.</p>
+    </div>
+    <div class="feature">
+      <h3>Hands-Free by Design</h3>
+      <p>Start drives automatically when your iPhone connects to the car, log with Siri or the Action Button, and tap events right on the Dynamic Island.</p>
     </div>
     <div class="feature">
       <h3>Replay Every Drive</h3>
@@ -137,6 +151,10 @@
     <div class="feature">
       <h3>Export for Video Editing</h3>
       <p>Turn a drive's events into timeline markers for Final Cut Pro, Premiere Pro, or DaVinci Resolve, aligned to your camera footage and ready to cut.</p>
+    </div>
+    <div class="feature">
+      <h3>AI Drive Recaps</h3>
+      <p>A short read on how the software performed, written on your iPhone by Apple Intelligence the moment a drive ends.</p>
     </div>
     <div class="feature">
       <h3>Private by Design</h3>
